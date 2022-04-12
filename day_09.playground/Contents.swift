@@ -1,6 +1,20 @@
 import UIKit
 
 
+//
+//struct State<DATA_TYPE, T, U> {
+//    var element : DATA_TYPE
+//    var otherElement : T
+//    var thirdElement : U
+//}
+//
+//let object = State(element: "gkgk", otherElement: 123, thirdElement: false)
+//
+//ob
+
+//
+//let object = State(element: "dddkdk")
+//obj
 
 struct MyArray<T>{
     

@@ -75,9 +75,34 @@ extension ContentView {
             let newTodo = Todo(id: i, title: "\(i) - 타이틀")
             todos.append(newTodo)
         }
-        return todos
+        
+        var modifiedTodos : [Todo] = []
+        
+        for (aTodoIndex, aTodo) in todos.enumerated(){
+            
+            var todoItem = aTodo
+            
+//            if isEvenNumber(index: aTodoIndex) {
+//                todoItem.title = aTodo.title + isEvenNumber(index: aTodoIndex) ? "(짝수)" : "(홀수)"
+//            } else {
+//                todoItem.title = aTodo.title + "(홀수)"
+//            }
+            
+            todoItem.title = aTodo.title + (isEvenNumber(index: aTodoIndex) ? "(짝수)" : "(홀수)")
+            
+            modifiedTodos.append(todoItem)
+        }
+//        return todos
+        return modifiedTodos
     }
+    
+    func isEvenNumber(index : Int) -> Bool {
+        return index % 2 == 0
+    }
+    
 }
+
+
 
 
 struct ContentView_Previews: PreviewProvider {

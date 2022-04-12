@@ -25,7 +25,9 @@ sayHi(){
     print("2초가 지났다. 2")
 }
 
+// 이부분은 잘 모르겠다.
 sayHi{
+    // 아래와 같은 문장을 출력하는 거다 
     print("2초가 지났다. 3")
 }
 
@@ -34,6 +36,7 @@ sayHi{
 //func completion(userInput: String){
 //
 //}
+
 
 
 // 매개변수로서 데이터를 반환하는 클로저
