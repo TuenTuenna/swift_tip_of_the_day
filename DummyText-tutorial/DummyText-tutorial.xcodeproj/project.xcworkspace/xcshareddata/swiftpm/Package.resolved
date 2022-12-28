@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "fakery",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vadymmarkov/Fakery",
+      "state" : {
+        "branch" : "master",
+        "revision" : "30628a1ca33222bc621d1360a0ba1a24256a8cfd"
+      }
+    }
+  ],
+  "version" : 2
+}
