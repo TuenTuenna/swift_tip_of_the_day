@@ -28,6 +28,14 @@ import UIKit
 //    }
 //}
 
+
+let jsonFromServer = """
+{
+    "name2": "개발하는 정대리",
+    "realname": "유튜바, 개발자",
+    "nickname2": "dev_jeongdaeri",
+}
+"""
 struct Person: Decodable {
     var name: String
 
@@ -48,4 +56,22 @@ struct Person: Decodable {
             self.name = ""
         }
     }
+    
+    static func getPersonFromJson(_ jsonString: String) -> Self? {
+        guard let jsonData : Data = jsonString.data(using: .utf8) else {
+            return nil
+        }
+        
+        do {
+            let person = try JSONDecoder().decode(Person.self, from: jsonData)
+            print("person: \(person)")
+            return person
+        } catch {
+            print("에러발생: \(error.localizedDescription)")
+            return nil
+        }
+        
+    }
 }
+
+let person = Person.getPersonFromJson(jsonFromServer)
